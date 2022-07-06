@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Gulzar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    color: rgb(55, 55, 55);
+    background-color: rgb(250, 255, 202);
+    /* font-family: 'Gulzar', serif; */
+    font-family: 'Roboto', sans-serif;
+}
+
+.entrada {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    /* margin: 0; */
+}
+
+p {
+    margin: 10px;
+}
+
+#lista {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.item {
+    display: flex;
+}
+
+input:checked + p {
+    text-decoration: line-through;
+}

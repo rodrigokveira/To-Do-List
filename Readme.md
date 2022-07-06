@@ -9,4 +9,4 @@ Além de fazer o proposto no desafio, também foram implementados:
 * Colocada uma verificação do texto do `input` ao clicar no botão. Caso o valor seja o inicial ou vazio, não será adicionado à lista.
 * O texto do `input` retorna ao valor inicial depois de ser adicionado à lista.
 
-Veja este projeto publicado em https://rodrigokveira.github.io/To-do-list/
+Veja este projeto publicado em https://rodrigokveira.github.io/To-Do-List/

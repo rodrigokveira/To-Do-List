@@ -1,7 +1,7 @@
-var buttonAdd = document.getElementById("buttonAdd");
-var lista = document.getElementById("lista");
-var inputTask = document.getElementById("inputTask");
-var initialText = inputTask.value;
+var buttonAdd = document.getElementById("buttonAdd");   // recebe o botão
+var lista = document.getElementById("lista");           // recebe a div da lista
+var inputTask = document.getElementById("inputTask");   // recebe o input
+var initialText = inputTask.value;                      // recebe o conteúdo do texto inicial ("Digite aqui a sua tarefa")
 
 function addItem() {
     if (inputTask.value != initialText && inputTask.value != ""){
@@ -18,27 +18,27 @@ function addItem() {
         item.appendChild(checkbox);                     // adiciona o checkbox à div criada
         item.appendChild(para);                         // adiciona o parágrafo à div criada
         lista.appendChild(item);                        // adiciona a div criada à div lista
-        inputTask.value = initialText;
-        inputTask.style.color = "rgb(165, 165, 165)";
+        inputTask.value = initialText;                  // volta o input para o seu conteúdo inicial
+        inputTask.style.color = "rgb(165, 165, 165)";   // altera a cor do input para cinza
     }
 }
 
-function inputTextInitial() {
-    if (inputTask.value == initialText) {
-        inputTask.value = "";
-        inputTask.style.color = "black";
+function inputTextInitial() {                           // verifica se o input está com o texto inicial
+    if (inputTask.value == initialText) {               // caso esteja
+        inputTask.value = "";                           // apaga o seu conteúdo
+        inputTask.style.color = "black";                // e seta a cor para preto
     }
 }
 
-function inputTextCheck() {
-    if (inputTask.value == "") {
-        inputTask.value = initialText;
-        inputTask.style.color = "rgb(165, 165, 165)";
-    } else {
-        inputTask.style.color = "black";
+function inputTextCheck() {                             // verifica se o input está vazio
+    if (inputTask.value == "") {                        // caso esteja
+        inputTask.value = initialText;                  // coloca o texto inicial
+        inputTask.style.color = "rgb(165, 165, 165)";   // e muda sua cor para cinza
+    } else {                                            // caso contrário
+        inputTask.style.color = "black";                // seta a cor para preto
     }
 }
 
-buttonAdd.addEventListener("click", addItem);
-inputTask.addEventListener("focus", inputTextInitial);
-inputTask.addEventListener("focusout", inputTextCheck);
+buttonAdd.addEventListener("click", addItem);               // chama a função de adicionar item ao clicar no botão
+inputTask.addEventListener("focus", inputTextInitial);      // chama a função de verificação do texto inicial no input
+inputTask.addEventListener("focusout", inputTextCheck);     // chama a função de verificação do conteúdo do input
